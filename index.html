@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grit Test</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="parent">
+	<section class="intro">
+		<h1>Welcome to the Grit Test</h1>
+		<p>
+			You will be presented with a series of statements.
+			For each statement, select the response that best describes 
+			how well the statement applies to you.
+		</p>
+		<p>
+			Be honest. There are no right or wrong answers.
+		</p>
+		<button id="startButton">Start</button>
+	</section>
+	
+	<section class="questions">
+		<h2 id="prompt">prompt goes here</h2>
+		<ul class="answers">
+			<!-- will be populated with items of the following form:
+			<li>
+				<input type="radio" class="option" name="option" value="0">
+				like me
+			</li>
+			-->
+		</ul>
+
+		<h3>question <span class="count"></span> of <span class="totalCount"></span></h3>
+	</section>
+
+	<section class="results">
+		<ul></ul>
+		<h2>Your grit score is <span id="result">666</span>%</h2>
+		<button id="againButton">Try again</button>
+	</section>
+</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/quiz.js"></script>
+</body>
+</html>
