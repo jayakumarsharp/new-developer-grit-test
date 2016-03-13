@@ -7,3 +7,5 @@ The "star dust" which makes a good programer great has very little to do with th
 There is no tracking on this application and you are the only one seeing the results, so please be honest when responding.
 
 Of course, there are no right or wrong answers! 
+
+Click [here](http://mariusbanea.github.io/new-developer-grit-test) to start.
