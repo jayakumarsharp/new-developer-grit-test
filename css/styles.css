@@ -1,31 +1,185 @@
-#parent {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.5);
-}
-#blah {
-	vertical-align: bottom;
-	border: 3px solid yellow;
-}
-section {
-	border: 3px solid green;
-	position: fixed;
-	margin: auto;
-	padding: 20px;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	width: 20rem;
-	background: white;
-}
-section.questions, section.results {
-	display: none;
+/*
+The CSS code gets to executed from top to bottom and left ro right
+
+Basic rules to write CSS
+- write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
+- write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
+*/
+
+
+/* -------------------------------------
+CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
 }
 
-ul.answers {
-	list-style-type: none;
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+    font-family: 'Bad Script', cursive;
+    font-size: 20px;
+    line-height: 2rem;
 }
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: aqua;
+}
+
+ul {
+    list-style-type: none
+}
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+section {
+    margin-top: 3rem;
+    background-image: url("../images/transparent.jpg");
+    border-radius: 0.5rem;
+    padding: 1rem;
+    min-width: 20rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: lightblue;
+}
+
+button {
+    background-color: #9e9e9e;
+    border-color: #9e9e9e;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: none;
+    width: auto;
+    color: #000000
+}
+
+button:hover {
+    background-color: #707070;
+}
+
+section.intro {
+    text-align: center;
+}
+
+section.questions,
+section.results {
+    display: none;
+}
+
+section.intro h1 {
+    font-size: 3rem;
+    font-family: 'Patrick Hand', cursive;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+section.questions h2,
+section.results h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-style: italic;
+}
+
+section.results h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+section.questions h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+section.questions h3 {
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section.questions ul.answers {
+    list-style-type: none;
+}
+
+section.questions ul.answers li {
+    margin-left: 10%;
+}
+
+section.questions ul.answers li input {
+    margin-right: 1rem;
+}
+
+section.results {
+    text-align: center;
+}
+
+section.results h3 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+section.results h4 {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+section.results ul {
+    text-align: left;
+}
+
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+
+/* -------------------------------------
+place all the desktop styles above this line
+
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+
+place all the mobile tables styles bellow this line
+*/
