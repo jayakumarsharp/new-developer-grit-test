@@ -138,6 +138,8 @@ section.questions h3 {
 
 section.questions ul.answers {
     list-style-type: none;
+    width: 40%;
+    margin: 0 auto;
 }
 
 section.questions ul.answers li {
@@ -152,8 +154,15 @@ section.results {
     text-align: center;
 }
 
-section.results h3 {
+section.results > h3 {
     font-family: 'Patrick Hand', cursive;
+}
+
+section.results > h3,
+section.results > p,
+section.intro > p {
+    width: 60%;
+    margin: 0 auto;
 }
 
 section.results h4 {
@@ -166,14 +175,17 @@ section.results h4 {
 
 section.results ul {
     text-align: left;
+    width: 60%;
+    margin: 0 auto;
 }
 
+
+}
 
 /* -------------------------------------
 Footer styles (Main Module)
 (all the styles inside the < footer > tag)
 */
-
 
 /* -------------------------------------
 place all the desktop styles above this line
